@@ -1,0 +1,74 @@
+{
+  "name": "Supabase Ready Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "register-user",
+        "httpMethod": "POST",
+        "responseMode": "responseNode"
+      },
+      "id": "1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "webhookId": "register-user-demo"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "database",
+              "value": "Supabase"
+            },
+            {
+              "name": "status",
+              "value": "Ready for insert"
+            }
+          ]
+        }
+      },
+      "id": "2",
+      "name": "Prepare Database Payload",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [550, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{$json}}"
+      },
+      "id": "3",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [850, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Prepare Database Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Database Payload": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

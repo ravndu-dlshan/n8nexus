@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none" role="img" aria-label="N8Nexus">
+  <rect width="180" height="180" rx="40" fill="#0B0F14"/>
+  <defs>
+    <linearGradient id="n8" x1="45" y1="45" x2="135" y2="135" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB15E"/>
+      <stop offset="1" stop-color="#FF6A00"/>
+    </linearGradient>
+  </defs>
+  <text
+    x="90"
+    y="118"
+    text-anchor="middle"
+    fill="url(#n8)"
+    font-family="system-ui, -apple-system, Segoe UI, sans-serif"
+    font-size="72"
+    font-weight="700"
+    letter-spacing="-0.04em"
+  >N8</text>
+</svg>
