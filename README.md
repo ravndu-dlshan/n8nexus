@@ -96,7 +96,7 @@ N8Nexus/
 - 📊 **Automations dashboard** — list, inspect, and run saved workflows
 - 🔐 **Supabase authentication** — secure per-user automations
 - 📤 **Self-host friendly** — export clean n8n JSON for any instance
-- 🔌 **200+ integrations** — everything n8n supports (Slack, HubSpot, Stripe, Notion, …)
+
 
 ---
 
