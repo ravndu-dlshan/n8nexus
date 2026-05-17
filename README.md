@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ n8nExus
+# ⚡ n8nEXUS
 
 ### Describe a process. Ship an n8n workflow.
 
